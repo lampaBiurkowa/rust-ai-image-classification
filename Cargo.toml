@@ -1,0 +1,16 @@
+[package]
+name = "burn"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "train"
+path = "bin/train.rs"
+
+[lib]
+name = "image_classification"
+path = "src/lib.rs"
+
+[dependencies]
+burn = { version = "0.15.0", features = ["train", "dataset", "tch", "autodiff", "dataset", "vision", "wgpu"] }
+thiserror = "2.0.6"
